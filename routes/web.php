@@ -33,7 +33,11 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::prefix('admin')->group(function() {
-    Route::get('test', function() {return 'Prefix Working';});
+    Route::get('prefix-url', function() {return 'Prefix Working';});
 });
+
+Route::get('test', function() {return
+    phpinfo();
+    });
 
 
